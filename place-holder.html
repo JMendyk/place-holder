@@ -2,20 +2,26 @@
 <link rel="import" href="../polymer/polymer.html">
 <polymer-element name="place-holder" attributes="w h color bg">
 	<template>
-<style>
-:host {
-display:block;
-width:{{w?w:"100%"}};
-height:{{h?h:"100%"}};
-color:{{color?color:"#969696"}};
-background:{{bg?bg:"#ccc"}};display:flex;justify-content:center;align-items:center;font-family:Tahoma,sans-serif;font-size:1em;}
-</style>
+		<style>
+			:host {
+				display: block;
+				width: {{w?w:"100%"}};
+				height: {{h?h:"100%"}};
+				color: {{color?color:"#969696"}};
+				background: {{bg?bg:"#ccc"}};
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: Tahoma,sans-serif;
+				font-size: 1em;
+			}
+		</style>
 
 		{{ dispWidth }} x {{ dispHeight }}
 
 	</template>
 	<script>
-		Polymer({
+		Polymer('place-holder', {
 			ready: function() {
 				var me = this;
 				me.dispWidth = me.offsetWidth;
