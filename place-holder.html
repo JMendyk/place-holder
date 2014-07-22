@@ -1,37 +1,28 @@
 <script src="../platform/platform.js"></script>
 <link rel="import" href="../polymer/polymer.html">
-<polymer-element name="place-holder" attributes="width height color background">
+<polymer-element name="place-holder" attributes="w h color bg">
 	<template>
-		
-		<style>
-			:host {
-				display: block;
-				
-			}
-			#placeholder {
-				width: {{ width ? width : "100%" }};
-				height: {{ height ? height : "100%" }};
-				color: {{ color ? color : "#969696" }};
-				background: {{ background ? background : "#cccccc" }};
-				font-family: Tahoma, sans-serif;
-				font-size: 1em;
-			}
-		</style>
+<style>
+:host {
+display:block;
+width:{{w?w:"100%"}};
+height:{{h?h:"100%"}};
+color:{{color?color:"#969696"}};
+background:{{bg?bg:"#ccc"}};display:flex;justify-content:center;align-items:center;font-family:Tahoma,sans-serif;font-size:1em;}
+</style>
 
-		<div id="placeholder" layout vertical center center-justified>{{ magicWidth }} x {{ magicHeight }}</div>
+		{{ dispWidth }} x {{ dispHeight }}
 
 	</template>
 	<script>
 		Polymer({
 			ready: function() {
-
-				this.magicWidth = this.$.placeholder.offsetWidth;
-				this.magicHeight = this.$.placeholder.offsetHeight;
-
 				var me = this;
+				me.dispWidth = me.offsetWidth;
+				me.dispHeight = me.offsetHeight;
 				window.onresize = function(){
-					me.magicWidth = me.$.placeholder.offsetWidth;
-					me.magicHeight = me.$.placeholder.offsetHeight;
+					me.dispWidth = me.offsetWidth;
+					me.dispHeight = me.offsetHeight;
 				}
 			}
 		});
