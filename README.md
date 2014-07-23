@@ -5,7 +5,7 @@
 This custom element uses [Polymer](http://www.polymer-project.org/), which is required for **placeholder** to work, so remember to download Polymer and import it to the page before using **placeholder**.
 ###Installation process
 1. Download [Polymer](http://www.polymer-project.org/) (if you don't have it already), using Git or Bower. **Placeholder** uses only basics of Polymer, so you don't have to download whole project.
-	```
+    ```
 	git clone https://github.com/Polymer/polymer.git
 	git clone https://github.com/Polymer/platform.git
 	or
@@ -22,3 +22,19 @@ This custom element uses [Polymer](http://www.polymer-project.org/), which is re
 
 	<link rel="import" href="PLACE-HOLDER_PARENT_FOLDER/place-holder/place-holder.html">
 	```
+	
+###Using the element
+The fastes way to start using **placeholder** element is to just add it to html page  
+```
+<place-holder></place-holder>
+```  
+by default element will fill parent element and have light-grey background with dark-grey text displaying width and height of itself.
+
+You can customize elements appearance using following attributes:
+
+|Type            |Attribute Name|Definition                                |
+|:--------------:|:------------:|:----------------------------------------:|
+|width           |width         |width of the placeholder                  |
+|height          |height        |height of the placeholder                 |
+|text color      |color         |color of the text in the placeholder      |
+|background color|bg            |color of the background of the placeholder|
