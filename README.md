@@ -5,6 +5,7 @@
 This custom element uses [Polymer](http://www.polymer-project.org/), which is required for **placeholder** to work, so remember to download Polymer and import it to the page before using **placeholder**.
 
 1. Download [Polymer](http://www.polymer-project.org/) (if you don't have it already), using Git or Bower. **Placeholder** uses only basics of Polymer, so you don't have to download whole project.
+
     ```
 	git clone https://github.com/Polymer/polymer.git
 	git clone https://github.com/Polymer/platform.git
@@ -12,10 +13,12 @@ This custom element uses [Polymer](http://www.polymer-project.org/), which is re
 	bower install --save Polymer/polymer
 	```
 2. Download **placeholder**
+
 	```
 	git clone https://github.com/KubaBest/place-holder.git
 	```
 3. Import **placeholder** (and Polymer if still not)
+
 	```
 	<script src="POLYMER_PLATFORM_PARENT_FOLDER/platform/platform.js"></script>
 	<link rel="import" href="POLYMER_PARENT_FOLDER/polymer/polymer.html">
