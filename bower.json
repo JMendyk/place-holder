@@ -1,0 +1,27 @@
+{
+  "name": "place-holder",
+  "version": "0.1",
+  "homepage": "https://github.com/KubaBest/place-holder",
+  "authors": [
+    "KubaBest <kubabest.android@gmail.com>"
+  ],
+  "description": "custom element to fill empty spaces",
+  "main": "place-holder.html",
+  "keywords": [
+    "place",
+    "holder",
+    "place-holder",
+    "custom",
+    "element",
+    "polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "old.txt"
+  ]
+}
