@@ -1,35 +1,49 @@
 <script src="../platform/platform.js"></script>
 <link rel="import" href="../polymer/polymer.html">
-<polymer-element name="place-holder" attributes="w h color bg">
+<polymer-element name="place-holder" attributes="width height color bg">
 	<template>
 		<style>
 			:host {
 				display: block;
-				width: {{w?w:"100%"}};
-				height: {{h?h:"100%"}};
-				color: {{color?color:"#969696"}};
-				background: {{bg?bg:"#ccc"}};
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				font-family: Tahoma,sans-serif;
-				font-size: 1em;
+				font-family: Tahoma, sans-serif;
+				text-align: center;
 			}
 		</style>
 
-		{{ dispWidth }} x {{ dispHeight }}
+		{{ dW }} x {{ dH }}
 
 	</template>
 	<script>
 		Polymer('place-holder', {
 			ready: function() {
 				var me = this;
-				me.dispWidth = me.offsetWidth;
-				me.dispHeight = me.offsetHeight;
-				window.onresize = function(){
-					me.dispWidth = me.offsetWidth;
-					me.dispHeight = me.offsetHeight;
-				}
+				me.correct(me);
+
+				// update elements properties after window resize
+				window.onresize = function(){me.correct(me);};
+			},
+			attributeChanged: function(attrName, oldVal, newVal) {
+				//console.log("attribute "+attrName+" changed ("+oldVal+" -> "+newVal+")");
+				this.correct(this);
+			},
+			correct: function(me) {
+				var ms = me.style;
+
+				// apply new values of attributes to style or set to default if new values are null
+				ms.width = (me.width == null) ? "100%" : me.width;
+				ms.height = (me.height == null) ? "100%" : me.height;
+				ms.color = (me.color == null) ? "#969696" : me.color;
+				ms.background = (me.bg == null) ? "#ccc" : me.bg;
+
+				// set new values for width and height to display inside the element
+				me.dW = me.offsetWidth;
+				me.dH = me.offsetHeight;
+
+				// resize font to fit inside the element
+				ms.fontSize = Math.min(me.dW,me.dH)/100*20 + "px";
 			}
 		});
 	</script>
