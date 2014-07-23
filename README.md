@@ -12,10 +12,12 @@ This custom element uses [Polymer](http://www.polymer-project.org/), which is re
 	or
 	bower install --save Polymer/polymer
 	```
-2. Download **placeholder**
+2. Download **placeholder** using Git or Bower
 
 	```
 	git clone https://github.com/KubaBest/place-holder.git
+	or
+	bower install --save place-holder
 	```
 3. Import **placeholder** (and Polymer if still not)
 
@@ -43,4 +45,4 @@ You can customize elements appearance using following attributes:
 |background color|bg            |color of the background of the placeholder|
 
 ###Additional Info
-My inspiration to create this element was [PLACEHOLD.IT](placehold.it), I thought that using **placehold.it** might be impossible if you are offline. **PLACEHOLD.IT** image weight and load time depends on the size of it and bandwidth. My project does not have this problem because there is not generated image, just HTML+CSS+JS which is only (1,44KB normal, 790B minified).
+My inspiration to create this element was [placehold.it](placehold.it), I thought that using **placehold.it** might be impossible if you are offline. **placehold.it** image weight and load time depends on the size of it and bandwidth. **[PLACEHOLDER](https://github.com/KubaBest/place-holder)** does not have this problem because there is no generated image, just 790 bytes of minified HTML+CSS+JS.
