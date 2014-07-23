@@ -21,7 +21,7 @@ This custom element uses [Polymer](http://www.polymer-project.org/), which is re
 	```
 3. Import **placeholder** (and Polymer if still not)
 
-	```
+	```html
 	<script src="POLYMER_PLATFORM_PARENT_FOLDER/platform/platform.js"></script>
 	<link rel="import" href="POLYMER_PARENT_FOLDER/polymer/polymer.html">
 
@@ -30,7 +30,7 @@ This custom element uses [Polymer](http://www.polymer-project.org/), which is re
 	
 ###Usage
 The fastes way to start using **placeholder** element is to just add it to html page  
-```
+```html
 <place-holder></place-holder>
 ```  
 by default element will fill parent element and have light-grey background with dark-grey text displaying width and height of itself.
