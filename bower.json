@@ -13,7 +13,11 @@
     "place-holder",
     "custom",
     "element",
-    "polymer"
+    "polymer",
+    "html",
+    "web-components",
+    "kubabest",
+    "KubaBest"
   ],
   "license": "MIT",
   "ignore": [
