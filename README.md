@@ -1,9 +1,9 @@
-#&lt;place-holder&gt; - *custom element to fill empty spaces*
-##What is it for?
+##&lt;place-holder&gt; - *custom element to fill empty spaces*
+###What is it for?
 **Placeholder(&lt;place-holder&gt;)** element lets you fill empty spaces in your website for future images, ads or anything else. Now you can set up your page without content and see how it presents!
-##Installation
+###Installation
 This custom element uses [Polymer](http://www.polymer-project.org/), which is required for **placeholder** to work, so remember to download Polymer and import it to the page before using **placeholder**.
-###Installation process
+
 1. Download [Polymer](http://www.polymer-project.org/) (if you don't have it already), using Git or Bower. **Placeholder** uses only basics of Polymer, so you don't have to download whole project.
     ```
 	git clone https://github.com/Polymer/polymer.git
@@ -23,7 +23,7 @@ This custom element uses [Polymer](http://www.polymer-project.org/), which is re
 	<link rel="import" href="PLACE-HOLDER_PARENT_FOLDER/place-holder/place-holder.html">
 	```
 	
-###Using the element
+###Usage
 The fastes way to start using **placeholder** element is to just add it to html page  
 ```
 <place-holder></place-holder>
@@ -38,3 +38,6 @@ You can customize elements appearance using following attributes:
 |height          |height        |height of the placeholder                 |
 |text color      |color         |color of the text in the placeholder      |
 |background color|bg            |color of the background of the placeholder|
+
+###Additional Info
+My inspiration to create this element was [PLACEHOLD.IT](placehold.it), I thought that using **placehold.it** might be impossible if you are offline. **PLACEHOLD.IT** image weight and load time depends on the size of it and bandwidth. My project does not have this problem because there is not generated image, just HTML+CSS+JS which is only (1,44KB normal, 790B minified).
