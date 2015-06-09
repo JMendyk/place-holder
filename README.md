@@ -38,10 +38,10 @@ by default element will fill parent element and have light-grey background with 
 
 You can customize **placeholder**'s appearance using following attributes:
 
-|Attribute Name|Description            |Type            |
-|:------------:|:---------------------:|:--------------:|
-|width         |width                  |Number|
-|height        |height                 |Number|
+|Attribute Name|Description            |Type                      |
+|--------------|-----------------------|--------------------------|
+|width         |width                  |Number                    |
+|height        |height                 |Number                    |
 |color         |color of the text      |CSS supported color format|
 |bg            |color of the background|CSS supported color format|
 
