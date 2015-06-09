@@ -41,5 +41,6 @@ old.txt
 test.html
 node_modules
 package.json
+npm-debug.log
 Gruntfile.js
 bower_components
