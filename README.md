@@ -38,12 +38,12 @@ by default element will fill parent element and have light-grey background with 
 
 You can customize **placeholder**'s appearance using following attributes:
 
-|Attribute Name|Description            |Type                      |
-|--------------|-----------------------|--------------------------|
-|width         |width                  |Number                    |
-|height        |height                 |Number                    |
-|color         |color of the text      |CSS supported color format|
-|bg            |color of the background|CSS supported color format|
+|Attribute |Description     |Type  |
+|----------|----------------|------|
+|width     |width           |Number|
+|height    |height          |Number|
+|color     |text color      |Color |
+|bg        |background color|Color |
 
 ###Additional Info
 Inspiration for me to create this element was [placehold.it](placehold.it), but using **placehold.it** is impossible if you are offline. Additionally **placehold.it** image weight and load time depends on the size of it and bandwidth, where **[PLACEHOLDER](https://github.com/JMendyk/place-holder)** does not have this problem because there is no generated image, only 480 bytes gzipped!
