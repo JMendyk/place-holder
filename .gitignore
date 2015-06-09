@@ -38,3 +38,8 @@ Icon
 
 #ignore file with old code fragments
 old.txt
+test.html
+node_modules
+package.json
+Gruntfile.js
+bower_components
