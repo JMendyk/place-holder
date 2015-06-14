@@ -1,48 +1,49 @@
-<polymer-element name="place-holder" attributes="width height color bg">
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="place-holder">
+	<style>
+		:host {
+			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: Tahoma, sans-serif;
+			text-align: center;
+		}
+	</style>
 	<template>
-		<style>
-			:host {
-				display: block;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				font-family: Tahoma, sans-serif;
-				text-align: center;
-			}
-		</style>
-
-		{{ dW }} x {{ dH }}
-
+		<a><span>{{dW}}</span> x <span>{{dH}}</span></a>
 	</template>
-	<script>
-		Polymer('place-holder', {
-			ready: function() {
-				var me = this;
-				me.correct(me);
+</dom-module>
 
-				// update elements properties after window resize
-				window.onresize = function(){me.correct(me);};
-			},
-			attributeChanged: function(attrName, oldVal, newVal) {
-				//console.log("attribute "+attrName+" changed ("+oldVal+" -> "+newVal+")");
-				this.correct(this);
-			},
-			correct: function(me) {
-				var ms = me.style;
+<script>
+	Polymer({
+		is: "place-holder",
+		properties: {
+			width: String,
+			height: String,
+			color: String,
+			bg: String
+		},
+		ready: function() {
+			var me = this;
 
-				// apply new values of attributes to style or set to default if new values are null
-				ms.width = (me.width == null) ? "100%" : me.width;
-				ms.height = (me.height == null) ? "100%" : me.height;
-				ms.color = (me.color == null) ? "#969696" : me.color;
-				ms.background = (me.bg == null) ? "#ccc" : me.bg;
+			// apply new values of attributes to style or set to default if new values are null
+			me.style.width = me.width ? me.width : "100%";
+			me.style.height = me.height ? me.height : "100%";
+			me.style.color = me.color ? me.color : "#969696";
+			me.style.background = me.bg ? me.bg : "#ccc";
 
-				// set new values for width and height to display inside the element
-				me.dW = me.offsetWidth;
-				me.dH = me.offsetHeight;
-
-				// resize font to fit inside the element
-				ms.fontSize = Math.min(me.dW,me.dH)/100*20 + "px";
-			}
-		});
-	</script>
-</polymer-element>
+			setTimeout(function(){me.correct(me)}, 100);
+			// update elements properties after window resize
+			window.onresize = function(){me.correct(me);};
+		},
+		correct: function(me) {
+			// set new values for width and height to display inside the element
+			me.dW = me.offsetWidth;
+			me.dH = me.offsetHeight;
+			// resize font to fit inside the element
+			me.style.fontSize = Math.min(me.dW,me.dH)/100*20 + "px";
+		}
+	});
+</script>

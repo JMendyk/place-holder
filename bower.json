@@ -1,11 +1,14 @@
 {
   "name": "place-holder",
-  "version": "0.1",
-  "homepage": "https://github.com/KubaBest/place-holder",
+  "version": "0.2",
+  "homepage": "https://github.com/JMendyk/place-holder",
   "authors": [
-    "KubaBest <kubabest.android@gmail.com>"
+    "JMendyk <jakubmendyk.szkola+git@gmail.com>"
   ],
   "description": "custom element to fill empty spaces",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
   "main": "place-holder.html",
   "keywords": [
     "place",
@@ -15,17 +18,20 @@
     "element",
     "polymer",
     "html",
+    "custom-elements",
     "web-components",
-    "kubabest",
-    "KubaBest"
+    "jmendyk",
+    "JMendyk"
   ],
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "package.json",
     "test",
     "tests",
-    "old.txt"
+    "test.html",
+    "Gruntfile.js"
   ]
 }
